@@ -5,8 +5,8 @@ add_definitions (-DHAVE_CONFIG_H)
 list (APPEND CMAKE_SWIG_FLAGS "-ignoremissing")
 separate_arguments (CMAKE_SWIG_FLAGS)
 
-find_package (PythonInterp)
-find_package (PythonLibs)
+find_package (PythonInterp 3 REQUIRED)
+find_package (PythonLibs 3 REQUIRED)
 
 if (PYTHONLIBS_FOUND AND PYTHONINTERP_FOUND)
   include_directories (${PYTHON_INCLUDE_DIRS})
